@@ -34,6 +34,9 @@ public class Model implements BoardGame<Coord> {
  
 	private ModelImplementor implementor;		// Cet objet sait communiquer avec les PieceModel
 
+	private int ScoreWhite;
+	private int ScoreBlack;
+
 	public Model() {
 		super();
 		this.implementor = new ModelImplementor();
@@ -95,6 +98,13 @@ public class Model implements BoardGame<Coord> {
 						// Obtenez la liste des mouvements de capture possibles après le premier
 						List<Coord> nextCaptures = this.implementor.getTargetCoordsInMultiJumpCase(targetSquareCoord);
 						System.out.println("nextCaptures : " + nextCaptures);
+						if (this.currentGamerColor == PieceSquareColor.WHITE) {
+							ScoreWhite++;
+						} else {
+							ScoreBlack++;
+						}
+						System.out.println("Score White : " + ScoreWhite);
+						System.out.println("Score Black : " + ScoreBlack);
 						// Si une rafle n'est pas possible alors changement de joueur
 						if (nextCaptures.isEmpty()) {
 							this.switchGamer();

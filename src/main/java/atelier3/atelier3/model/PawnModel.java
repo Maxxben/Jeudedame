@@ -10,7 +10,6 @@ public class PawnModel extends AbstractPieceModel implements PieceModel, Promota
 
 	
 	private int direction;
-	
 	public PawnModel(Coord coord, PieceSquareColor pieceColor) {
 		super(coord, pieceColor);
 		this.direction = PieceSquareColor.BLACK.equals(this.getPieceColor()) ? -1 : 1;
@@ -89,6 +88,7 @@ public class PawnModel extends AbstractPieceModel implements PieceModel, Promota
 		
 		return targetCoords;
 	}
+
 
 	
 
