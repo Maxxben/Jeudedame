@@ -1,7 +1,9 @@
 # Jeudedame - JAVA
 
 Evolution des fonctionnalités : Implémentation de rafles.
+<br>
 ou
+<br>
 Evolution de l’architecture d'un jeu de dame : Mise en réseau du jeu.
 
 <br>
